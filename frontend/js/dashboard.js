@@ -16,7 +16,7 @@ if (!token) {
 
     alert("Please login first.");
 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 */
 
@@ -70,7 +70,7 @@ if (sidebarLogout) {
         localStorage.removeItem("currentUser");
 
         window.location.href =
-            "login.html";
+            "index.html";
 
     });
 
