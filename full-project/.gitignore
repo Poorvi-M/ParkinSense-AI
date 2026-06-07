@@ -87,3 +87,4 @@ dist/
 
 *.tmp
 *.bak
+*.db
