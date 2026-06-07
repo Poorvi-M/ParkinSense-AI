@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>ParkinSense AI Dashboard</title>
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+>
+```
+
+</head>
+
+<body>
+
+```
+<!-- ===================================
+     Sidebar
+==================================== -->
+
+<div class="sidebar">
+
+    <div class="sidebar-logo">
+
+        <i class="fa-solid fa-brain"></i>
+
+        <span>ParkinSense AI</span>
+
+    </div>
+
+    <nav>
+
+        <a
+            href="dashboard.html"
+            class="active"
+        >
+            <i class="fa-solid fa-house"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <div class="sidebar-heading">
+            <span>Patient Management</span>
+        </div>
+
+        <a href="treatment.html">
+
+            <i class="fa-solid fa-pills"></i>
+
+            <span>Treatments</span>
+
+        </a>
+
+        <a href="progression.html">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <span>Progression</span>
+
+        </a>
+
+        <div class="sidebar-heading">
+            <span>Account</span>
+        </div>
+
+        <a href="profile.html">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>Profile</span>
+
+        </a>
+
+        <button
+            id="sidebarLogout"
+            class="sidebar-btn"
+            type="button"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </button>
+
+    </nav>
+
+</div>
+
+<!-- ===================================
+     Main Content
+==================================== -->
+
+<div class="main-content">
+
+    <div class="dashboard-container">
+
+        <!-- ===================================
+             Top Bar
+        ==================================== -->
+
+        <div class="top-bar">
+
+            <div class="page-title">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <h1>ParkinSense AI</h1>
+
+            </div>
+
+            <div class="top-right">
+
+                <div
+                    class="profile-circle"
+                    id="profileCircle"
+                    onclick="window.location.href='profile.html'"
+                    title="View Profile"
+                >
+                    U
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ===================================
+             Welcome Banner
+        ==================================== -->
+
+        <div class="welcome-banner">
+
+            <h2>
+                Welcome Back 👋
+            </h2>
+
+            <p id="welcomeText">
+                Monitor Parkinson's disease progression through voice-based analysis.
+            </p>
+
+        </div>
+
+        <!-- ===================================
+             Dashboard Grid
+        ==================================== -->
+
+        <div class="dashboard-grid dashboard-layout">
+
+            <!-- ===================================
+                 Voice Analysis
+            ==================================== -->
+
+            <div class="card voice-analysis-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-wave-square"></i>
+
+                    Voice Analysis
+
+                </h2>
+
+                <p class="sub-text">
+
+                    Upload a voice sample and monitor analysis progress.
+
+                </p>
+
+                <label
+                    for="audioFile"
+                    class="custom-file-upload"
+                >
+
+                    <i class="fa-solid fa-upload"></i>
+
+                    Choose Audio File
+
+                </label>
+
+                <input
+                    type="file"
+                    id="audioFile"
+                    accept=".wav,.mp3"
+                    hidden
+                >
+
+                <p id="selectedFile">
+
+                    No file selected
+
+                </p>
+
+                <button id="uploadBtn">
+
+                    Upload Audio
+
+                </button>
+
+                <div class="analysis-section">
+
+                    <h3>
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        Status
+
+                    </h3>
+
+                    <p id="uploadStatus">
+
+                        No file uploaded yet
+
+                    </p>
+
+                </div>
+
+                <div class="analysis-section">
+
+                    <h3>
+
+                        <i class="fa-solid fa-stethoscope"></i>
+
+                        Diagnosis
+
+                    </h3>
+
+                    <div id="diagnosisResult">
+
+                        <p>
+
+                            Waiting for ML analysis...
+
+                        </p>
+
+                        <p class="sub-text">
+
+                            Upload a voice sample to begin analysis.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="secondary-btn"
+                    onclick="window.location.href='diagnosis.html'"
+                >
+
+                    View Diagnosis History
+
+                </button>
+
+            </div>
+
+            <!-- ===================================
+                 Severity Score
+            ==================================== -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Severity Score
+
+                </h2>
+
+                <p>
+
+                    View latest severity assessment.
+
+                </p>
+
+                <button
+                    onclick="window.location.href='severity.html'"
+                >
+
+                    View Score
+
+                </button>
+
+            </div>
+
+            <!-- ===================================
+                 Reports
+            ==================================== -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                    Reports
+
+                </h2>
+
+                <p>
+
+                    View generated medical reports.
+
+                </p>
+
+                <button
+                    onclick="window.location.href='reports.html'"
+                >
+
+                    View Reports
+
+                </button>
+
+            </div>
+
+            <!-- ===================================
+                 Quick Overview
+            ==================================== -->
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+
+</body>
+
+</html>
