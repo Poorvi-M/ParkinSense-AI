@@ -101,7 +101,7 @@ if (registerForm) {
                     setTimeout(() => {
 
                         window.location.href =
-                            "login.html";
+                            "index.html";
 
                     }, 1500);
 
@@ -247,5 +247,5 @@ function logout() {
     );
 
     window.location.href =
-        "login.html";
+        "index.html";
 }

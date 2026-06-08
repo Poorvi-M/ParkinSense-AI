@@ -23,7 +23,7 @@ if (!token) {
     alert("Please login first.");
 
     window.location.href =
-        "login.html";
+        "index.html";
 }
 
 
